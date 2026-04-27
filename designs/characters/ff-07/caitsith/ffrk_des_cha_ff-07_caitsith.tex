@@ -1,0 +1,81 @@
+\documentclass[border=1cm]{standalone}
+
+\usepackage{tikz}
+\usepackage{pixelart}
+\usepackage{xcolor}
+
+\pgfdeclarelayer{gridlayer}
+\pgfsetlayers{main,gridlayer}
+
+\definecolor{frame}{RGB}{24,24,24}
+\definecolor{clothesA}{RGB}{90,33,8}
+\definecolor{clothesB}{RGB}{173,41,16}
+\definecolor{clothesC}{RGB}{90,49,198}
+\definecolor{clothesD}{RGB}{156,90,198}
+\definecolor{clothesE}{RGB}{189,138,8}
+\definecolor{clothesF}{RGB}{247,239,74}
+\definecolor{skinA}{RGB}{173,123,115}
+\definecolor{skinB}{RGB}{214,189,198}
+\definecolor{skinC}{RGB}{239,239,214}
+\definecolor{skinD}{RGB}{66,57,57}
+\definecolor{skinE}{RGB}{99,90,90}
+\definecolor{skinF}{RGB}{152,155,159}
+\definecolor{skinG}{RGB}{229,237,238}
+
+\begin{document}
+    \begin{tikzpicture}
+        \begin{pgfonlayer}{gridlayer}
+            %\draw[help lines,semithick,black!70,step=1] (-2,-2) grid (33,33);
+        \end{pgfonlayer}
+        \pixelart[colors=%
+            {
+                X=frame,
+                o=skinA,
+                p=skinB,
+                q=skinC,
+                r=skinD,
+                s=skinE,
+                t=skinF,
+                u=skinG,
+                a=clothesA,
+                b=clothesB,
+                c=clothesC,
+                d=clothesD,
+                e=clothesE,
+                f=clothesF
+            }]%
+            {
+                ...........X............
+                ..........XfX...........
+                ........XreqXrX.........
+                ........sXrXspX.........
+                ........XrsrroX.........
+                ........XtrXsX..........
+                .......XruXsssX.XX......
+                ........XuutrXaXbbX.XX..
+                ......XX.XtXXabbaX.XtuX.
+                ......XtXbabarXaX.XtXX..
+                .......XrXutXsXX.XsX....
+                ........XXtXrXrXrrX.....
+                .......XXrXutXXXXX......
+                ......XppXXXXXpqqX......
+                .......XopqqpoqoX.XX....
+                ......XpqqXqqpoXX.XtXX..
+                .....XoqqqXpqqpoXX.XddX.
+                ....XoXXXpuXqpXXoXXcdcdX
+                .XX.XpqqpXXopopqqpXdXcXX
+                XqpXpqopqqqpXXXooqXcXX.X
+                XpoXqqqqqqqXqqpXXpqX.X..
+                XpXopqqpoqqXpqqopqpoX...
+                .XXpqqqqpooXoqppoXXX....
+                ..XpqqqqqqqoXppoXX......
+                ..XopqqqqqqppXXXooX.....
+                ...XopqqqpppqqpoooX.....
+                ..XXXopppopqqqqppopX....
+                .XppoXXooXXXXoppoXX.....
+                .XoqqpoXXpqqpXXXXX......
+                ..XXXXXXoqpqqppooX......
+                ........XXXXXXXXX.......
+            }
+    \end{tikzpicture}
+\end{document}
