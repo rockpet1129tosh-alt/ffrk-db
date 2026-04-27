@@ -1,0 +1,70 @@
+\documentclass[border=1cm]{standalone}
+
+\usepackage{tikz}
+\usepackage{pixelart}
+\usepackage{xcolor}
+
+\pgfdeclarelayer{gridlayer}
+\pgfsetlayers{main,gridlayer}
+
+\definecolor{frame}{RGB}{24,24,24}
+\definecolor{hairA}{RGB}{111,34,22}
+\definecolor{hairB}{RGB}{159,69,54}
+\definecolor{hairC}{RGB}{198,126,75}
+\definecolor{clothesA}{RGB}{0,77,159}
+\definecolor{clothesB}{RGB}{0,126,247}
+\definecolor{clothesC}{RGB}{27,141,14}
+\definecolor{clothesD}{RGB}{41,193,25}
+\definecolor{clothesE}{RGB}{247,247,247}
+\definecolor{skinA}{RGB}{231,148,66}
+\definecolor{skinB}{RGB}{255,198,132}
+\definecolor{skinC}{RGB}{207,175,106}
+
+\begin{document}
+    \begin{tikzpicture}
+        \begin{pgfonlayer}{gridlayer}
+            %\draw[help lines,semithick,black!70,step=1] (-2,-2) grid (33,33);
+        \end{pgfonlayer}
+        \pixelart[colors=%
+            {
+                X=frame,
+                l=hairA,
+                m=hairB,
+                n=hairC,
+                o=skinA,
+                p=skinB,
+                q=skinC,
+                a=clothesA,
+                b=clothesB,
+                c=clothesC,
+                d=clothesD,
+                e=clothesE
+            }]%
+            {
+                ..XX.XXXXX.....
+                .XnmXlmnmlXXXmX
+                .XXnllXmnnmlmlX
+                XlmlXnmXmllmlX.
+                XnmXXmnXlmlXXlX
+                XmlXpXmmXXmmmlX
+                .XlXpXXXXpXllX.
+                ..XXpaeXopXlX..
+                ...XpaeoXXXX...
+                ..XXppoobbaaX..
+                ..XbXpoXbaqeqX.
+                .XqabXXaaaXeeqX
+                XoXXbXbbXXXqeqX
+                XpoXabbXppXmeqX
+                XooXXaaXpoomqX.
+                .XX.XddXoooXX..
+                ....XbbbXXXaX..
+                ....XXXabbaaX..
+                .....XqXqeqX...
+                .....XcXqeqX...
+                ....XXXXcdcX...
+                ...XcdcXXXccX..
+                ...XXXXcdcXcX..
+                .......XXXXXX..
+            }
+    \end{tikzpicture}
+\end{document}

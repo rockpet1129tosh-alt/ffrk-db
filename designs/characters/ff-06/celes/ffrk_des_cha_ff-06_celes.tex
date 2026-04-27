@@ -1,0 +1,68 @@
+\documentclass[border=1cm]{standalone}
+
+\usepackage{tikz}
+\usepackage{pixelart}
+\usepackage{xcolor}
+
+\pgfdeclarelayer{gridlayer}
+\pgfsetlayers{main,gridlayer}
+
+\definecolor{frame}{RGB}{24,24,24}
+\definecolor{hairA}{RGB}{214,189,16}
+\definecolor{hairB}{RGB}{148,107,8}
+\definecolor{clothesA}{RGB}{99,90,165}
+\definecolor{clothesB}{RGB}{132,181,239}
+\definecolor{clothesC}{RGB}{24,123,24}
+\definecolor{clothesD}{RGB}{132,189,33}
+\definecolor{skinA}{RGB}{255,214,148}
+\definecolor{skinB}{RGB}{231,123,57}
+\definecolor{skinC}{RGB}{255,255,222}
+\definecolor{eyes}{RGB}{24,49,140}
+
+\begin{document}
+    \begin{tikzpicture}
+        \begin{pgfonlayer}{gridlayer}
+            %\draw[help lines,semithick,black!70,step=1] (-2,-2) grid (33,33);
+        \end{pgfonlayer}
+        \pixelart[colors=%
+            {
+                X=frame,
+                a=hairA,
+                b=hairB,
+                f=skinA,
+                g=skinB,
+                h=skinC,
+                l=clothesA,
+                m=clothesB,
+                n=clothesC,
+                o=clothesD,
+                w=eyes
+            }]%
+            {
+                ....XXXX.XX.....
+                ..XXaabbabbX....
+                ..XabbhhaaaX....
+                .XbabahaaaabX...
+                XaabgbaabXXllX..
+                XabXfXaablmlmX..
+                XbbXfwXabbXXbX..
+                .XbXfwhbhbaaabX.
+                ...XfwhbabbaabX.
+                ...XffgbbbXXbabX
+                ..XXXfgbXmmmXbaX
+                .XhmXXnXmhhhhXaX
+                ..XXnoonmXggXbaX
+                ..XXooooXXXfgXaX
+                .XfgXllXfglfgXbX
+                .XffXXnXfflgXXX.
+                ..XX.XgnXXXXlmX.
+                .....XgXffgXlmX.
+                .....XlXllXXXmmX
+                .....XmXmhlXXlmX
+                .....XlXmhmlXlhX
+                ....XhlXllmlXXhX
+                ....XXXhhhXmX.X.
+                ......XXXXXXX...
+            }
+    \end{tikzpicture}
+\end{document}

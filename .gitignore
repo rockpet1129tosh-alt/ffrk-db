@@ -1,0 +1,38 @@
+# LaTeX 中間ファイル（コミット除外）
+*.log
+*.aux
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.dvi
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+
+# PDFは配布用として必ずコミット（除外しない）
+# *.pdf
+
+# エディタ・OS関連
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+.vscode/
+!.vscode/settings.json
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
